@@ -20,7 +20,7 @@ int loop = 0; /* loop intiated to 0, commented out as deadlock reached*/
 void taskOne(std::shared_ptr<Semaphore> mutex, std::shared_ptr<Semaphore> turnstile, std::shared_ptr<Semaphore> turnstile2)
 
 {
-	/*while(loop < 2){*/
+	while(loop <= 2){
 
 		mutex->Wait();
 		counter ++; 
@@ -50,6 +50,7 @@ void taskOne(std::shared_ptr<Semaphore> mutex, std::shared_ptr<Semaphore> turnst
 			{
 				std::cout << "Threads complete\n"; 
 				turnstile->Wait();	/*Lock the first */
+				loop ++;
 				turnstile2->Signal();	/*Unlock the second */
 			}
 
@@ -58,8 +59,8 @@ void taskOne(std::shared_ptr<Semaphore> mutex, std::shared_ptr<Semaphore> turnst
 
 	 	turnstile2->Wait();	/*Second Turnstile */
 		turnstile2->Signal();
-		/*loop ++;
-	}*/
+		
+	}
 }
 	  
 
