@@ -1,3 +1,22 @@
+
+/*! 
+
+
+Author: Eamonn Gaynor
+
+Date: 08/10/2018
+
+File: Semaphore.cpp
+
+Brief: Uses C++11 features such as mutex and condition variables to implement Semaphore
+
+Bugs: N/A
+
+Licence: GNU (General Public License)
+
+
+*/
+
 #include "Semaphore.h"
 /*! \class Semaphore
     \brief A Semaphore Implementation
