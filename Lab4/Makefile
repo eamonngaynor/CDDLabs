@@ -1,19 +1,24 @@
-#Author: Eamonn Gaynor
-#Date created: 08/10/2017
-#Bugs: N/A
-#Purpose: Makefile to run barrier.cpp and Semaphore.cpp
+
+#Author: Eamonn Gaynor                                                          
+#Date created: 08/10/2017                                                       
+#Bugs: N/A                                                                      
+#Purpose: Makefile to run barrier.cpp and Semaphore.cpp                            
+#File: Makefile                                                                 
+#License: GPL - General Public License                                          
+                                                                                
+                                                                                
+EXE = Barrier
+CC = g++
+CFLAGS = -std=c++11 -pthread -I.
+CFILES = barrier.cpp Semaphore.cpp
 
 
-CC=g++
-CFLAGS= -std=c++11 -pthread
-FILES= barrier.cpp Semaphore.cpp
-OUT_EXE=Barrier
+ALL: $(CFILES)
+	$(CC) $(CFILES) $(CFLAGS) -o $(EXE) $(DEBUGFLAGS)
 
-build: $(FILES)
-	$(CC) -o $(OUT_EXE) $(FILES) $(CFLAGS)
+DEBUG: DEBUGFLAGS = -g -O0 -Wall
+DEBUG: ALL
 
-clean:
+
+CLEAN:
 	rm *.o
-
-debug:
-	gdb

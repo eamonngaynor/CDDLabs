@@ -1,8 +1,19 @@
-/*
-#Author: Eamonn Gaynor 
-#Date created: 18/10/2017
-#Bugs: Deadlock reached upon first loop
-#Purpose: A reusable barrier class for three threads. 
+/*! 
+
+
+Author: Eamonn Gaynor
+
+Date: 08/10/2018
+
+File: barrier.cpp
+
+Brief: Creating a reusable barrier class that employs the Semaphore class
+
+Bugs: N/A
+
+Licence: GNU (General Public License)
+
+
 */
 
 #include "Semaphore.h"
