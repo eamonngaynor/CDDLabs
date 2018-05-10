@@ -1,9 +1,22 @@
-/**<
-#Author: Eamonn Gaynor
-#Date created: 08/10/2017
-#Bugs: N/A
-#Purpose: A mutex file for two threads through one task 
+/*! 
+
+
+Author: Eamonn Gaynor
+
+Date: 08/10/2018
+
+File: mutex.cpp
+
+Brief: This program will demonstrate Mutual Exlusion using the Semaphore class
+
+Bugs: N/A
+
+Licence: GNU (General Public License)
+
+
 */
+
+
 
 #include "Semaphore.h"
 #include <iostream>
