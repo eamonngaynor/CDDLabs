@@ -15,10 +15,18 @@
 #Licence: GNU (General Public License)
 
 
-CC=g++
-CFLAGS= -std=c++11 -pthread
-FILES= signal.cpp Semaphore.cpp
-OUT_EXE=signal
+EXE = signal
+CC = g++
+CFLAGS = -std=c++11 -pthread -I.
+CFILES = signal.cpp Semaphore.cpp
 
-build: $(FILES)
-	$(CC) -o $(OUT_EXE) $(FILES) $(CFLAGS)
+
+ALL: $(CFILES)
+	$(CC) $(CFILES) $(CFLAGS) -o $(EXE) $(DEBUGFLAGS)
+
+DEBUG: DEBUGFLAGS = -g -O0 -Wall
+DEBUG: ALL
+
+
+CLEAN:
+	rm *.o
