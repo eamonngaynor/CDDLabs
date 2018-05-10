@@ -1,3 +1,23 @@
+
+/*! 
+
+
+Author: Eamonn Gaynor
+
+Date: 08/10/2018
+
+File: Semaphore.cpp
+
+Brief: Signalling with Semaphores - Create two threads where one thread signals the other using a Semaphore
+
+Bugs: N/A
+
+Licence: GNU (General Public License)
+
+
+*/
+
+
 #include "Semaphore.h"
 #include <iostream>
 #include <thread>

@@ -1,7 +1,19 @@
+
+
+
+
 #Author: Eamonn Gaynor
-#Date created: 08/10/2017
+
+#Date: 08/10/2018
+
+#File: Semaphore.h
+
+#Brief: Makefile to run signal.cpp and Semaphore.cpp
+
 #Bugs: N/A
-#Purpose: Makefile to run signal.cpp and Semaphore.cpp
+
+#Licence: GNU (General Public License)
+
 
 CC=g++
 CFLAGS= -std=c++11 -pthread
